@@ -99,4 +99,8 @@ langchain-community
 langchain-core
 langchain_openai
 faiss-cpu
+<<<<<<< HEAD
 faker
+=======
+faker
+>>>>>>> 8a86b426336b86674d1662faddeb05c41dabaa1b

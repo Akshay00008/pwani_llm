@@ -10025,3 +10025,10 @@ Okay, so you want something *fresh* for Fresh Fri (and Pwani Oil's other goodies
 2025-02-18 18:03:20,133 - src.chatbot - INFO - 102656 - 108172 - Creating text output with role: assistant
 2025-02-18 18:03:20,134 - src.chatbot - INFO - 102656 - 108172 - Creating summary output with role: assistant
 2025-02-18 18:03:20,136 - root - INFO - 102656 - 108172 - Initializing Google model: gemini-2.0-pro-exp-02-05
+2025-02-18 18:26:12,325 - src.chatbot - INFO - 102656 - 55860 - Using existing RAG system from session state
+2025-02-18 18:26:12,351 - root - INFO - 102656 - 55860 - Added new user message to chat history
+2025-02-18 18:26:21,181 - root - INFO - 102656 - 55860 - Added new assistant message to chat history
+2025-02-18 18:26:21,184 - src.chatbot - INFO - 102656 - 55860 - Creating text output with role: assistant
+2025-02-18 18:26:50,260 - src.chatbot - INFO - 102656 - 89024 - Using existing RAG system from session state
+2025-02-18 18:26:50,294 - root - INFO - 102656 - 89024 - Chat history and all related data cleared successfully
+2025-02-18 18:26:50,398 - src.chatbot - INFO - 102656 - 89024 - Using existing RAG system from session state
