@@ -79,46 +79,19 @@ def create_prompt_template(
 # Handle missing specific instructions
     **Specific Features/Instructions:**
     {specific_instructions}
-    Generate engaging and persuasive content in not more than 100 words for Pwani Oil's marketing campaign that aligns with the following details. This campaign is not limited to their cooking oil products but encompasses all of their products, including margarine, baking fats, and other related offerings.
+    Create a catchy, short, and impactful marketing campaign for [Product Name].
+The content should highlight the following:
 
-Campaign Details:
+Quality: Emphasize the product’s high standards, superior craftsmanship, or rigorous testing.
+Sustainability: Showcase eco-friendly practices, sustainable sourcing, or environmental impact.
+Innovation: Focus on the cutting-edge technology, unique features, or benefits the product offers.
+Health/Well-being: If relevant, mention how the product aligns with a healthier lifestyle.
+Use clear, relatable language that resonates with families, professionals, or target audience groups. Integrate current trends, relatable emotions, or even memes to make the content feel fresh and engaging. Keep the tone warm, inspiring, and authentic.
 
-Focus on promoting Pwani Oil's diverse range of high-quality, sustainable, and innovative products.
+End with a strong call-to-action encouraging consumers to choose [Product Name] for their everyday needs.
 
-Highlight the health benefits, eco-friendly practices, and advanced production techniques across all product lines.
-
-Include a call-to-action encouraging customers to choose Pwani Oil for their cooking, baking, and everyday needs.
-
-Target Market Preferences:
-
-The audience values health-conscious, environmentally responsible, and premium-quality products.
-
-They prefer clear, relatable messaging that emphasizes trust, authenticity, and long-term benefits.
-
-The tone should be warm, informative, and inspiring, resonating with families, chefs, bakers, and health enthusiasts.
-
-Specific Instructions:
-
-Use simple, accessible language that appeals to a wide audience.
-
-Incorporate storytelling elements to create an emotional connection with the brand.
-
-Highlight the versatility of Pwani Oil's products (e.g., cooking oils for frying, margarine for baking, etc.).
-
-Include relevant statistics, testimonials, or examples to build credibility.
-
-Ensure the content is consistent with Pwani Oil's core values of quality, sustainability, and innovation.
-
-Core Values Alignment:
-
-Quality: Emphasize the superior standards and rigorous testing processes behind all Pwani Oil products.
-
-Sustainability: Showcase the brand's commitment to eco-friendly sourcing, production, and packaging across their entire product range.
-
-Innovation: Highlight how Pwani Oil leverages cutting-edge technology to deliver healthier, more efficient, and versatile solutions for cooking, baking, and more.
-
-Deliver the content in a format suitable for social media posts, blog articles, or email newsletters, ensuring it is visually appealing and easy to share. The goal is to strengthen brand loyalty, attract new customers, and reinforce Pwani Oil's position as a leader in the cooking oil, margarine, and baking fats industry"""
-
+Hashtags: Use trending and relevant hashtags to increase reach.
+    """
     # Content Style and Tone
     content_style_section = """
 **Content Specifications:**
