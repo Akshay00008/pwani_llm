@@ -79,7 +79,7 @@ def create_prompt_template(
 # Handle missing specific instructions
     **Specific Features/Instructions:**
     {specific_instructions}
-    Generate engaging and persuasive content for Pwani Oil's marketing campaign that aligns with the following details. This campaign is not limited to their cooking oil products but encompasses all of their products, including margarine, baking fats, and other related offerings.
+    Generate engaging and persuasive content in not more than 100 words for Pwani Oil's marketing campaign that aligns with the following details. This campaign is not limited to their cooking oil products but encompasses all of their products, including margarine, baking fats, and other related offerings.
 
 Campaign Details:
 

@@ -9960,3 +9960,68 @@ Feeling that good food vibe? Choose Pwani Oil. It's the heart of every delicious
 2025-02-18 17:11:06,317 - src.chatbot - INFO - 109424 - 21008 - Creating text output with role: assistant
 2025-02-18 17:11:06,319 - src.chatbot - INFO - 109424 - 21008 - Creating summary output with role: assistant
 2025-02-18 17:11:06,323 - root - INFO - 109424 - 21008 - Initializing Google model: gemini-2.0-pro-exp-02-05
+2025-02-18 18:02:55,799 - src.chatbot - INFO - 102656 - 72300 - Initializing new RAG system
+2025-02-18 18:02:55,801 - root - INFO - 102656 - 72300 - Initializing OpenAI model: gpt-4-turbo-preview
+2025-02-18 18:02:57,159 - rag - INFO - 102656 - 72300 - Loaded existing FAISS index from ContentGenApp/faiss_index
+2025-02-18 18:02:57,160 - src.chatbot - INFO - 102656 - 72300 - RAG system instance created successfully
+2025-02-18 18:02:57,831 - src.chatbot - INFO - 102656 - 72300 - Using cached RAG knowledge base
+2025-02-18 18:03:06,221 - src.chatbot - INFO - 102656 - 101280 - Using existing RAG system from session state
+2025-02-18 18:03:11,202 - src.chatbot - INFO - 102656 - 108172 - Using existing RAG system from session state
+2025-02-18 18:03:11,228 - root - INFO - 102656 - 108172 - Initializing Google model: gemini-2.0-pro-exp-02-05
+2025-02-18 18:03:11,304 - root - INFO - 102656 - 108172 - Initializing workflow with RAG enabled: True
+2025-02-18 18:03:11,970 - rag - INFO - 102656 - 108172 - Loaded existing FAISS index from ContentGenApp/faiss_index
+2025-02-18 18:03:11,977 - root - INFO - 102656 - 108172 - Querying RAG system with context:
+Brand: Fresh Fri
+Product: 500L
+Category: Cooking Oil
+2025-02-18 18:03:13,473 - httpx - INFO - 102656 - 108172 - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-02-18 18:03:13,474 - openai._base_client - INFO - 102656 - 108172 - Retrying request to /embeddings in 0.447255 seconds
+2025-02-18 18:03:14,592 - httpx - INFO - 102656 - 108172 - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-02-18 18:03:14,594 - openai._base_client - INFO - 102656 - 108172 - Retrying request to /embeddings in 0.869528 seconds
+2025-02-18 18:03:16,216 - httpx - INFO - 102656 - 108172 - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 429 Too Many Requests"
+2025-02-18 18:03:16,221 - rag - ERROR - 102656 - 108172 - Error querying RAG system: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+Traceback (most recent call last):
+  File "C:\Users\hp\Downloads\Pwani-Marketing_LLM-main_3\Pwani-Marketing_LLM-main\src\rag.py", line 258, in query
+    docs = self.vector_store.similarity_search(question, k=k*3)  # Fetch more, compression will reduce
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_community\vectorstores\faiss.py", line 643, in similarity_search
+    docs_and_scores = self.similarity_search_with_score(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_community\vectorstores\faiss.py", line 515, in similarity_search_with_score
+    embedding = self._embed_query(query)
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_community\vectorstores\faiss.py", line 266, in _embed_query
+    return self.embedding_function.embed_query(text)
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_openai\embeddings\base.py", line 629, in embed_query
+    return self.embed_documents([text])[0]
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_openai\embeddings\base.py", line 588, in embed_documents
+    return self._get_len_safe_embeddings(texts, engine=engine)
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\langchain_openai\embeddings\base.py", line 483, in _get_len_safe_embeddings
+    response = self.client.create(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\resources\embeddings.py", line 128, in create
+    return self._post(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1290, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 967, in request
+    return self._request(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1056, in _request
+    return self._retry_request(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1105, in _retry_request
+    return self._request(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1056, in _request
+    return self._retry_request(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1105, in _retry_request
+    return self._request(
+  File "C:\Users\hp\anaconda3\envs\my_virtual_env\lib\site-packages\openai\_base_client.py", line 1071, in _request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2025-02-18 18:03:16,239 - root - INFO - 102656 - 108172 - Cached RAG context for key: Fresh Fri_500L_Cooking Oil
+2025-02-18 18:03:16,240 - root - INFO - 102656 - 108172 - RAG context retrieved:
+
+2025-02-18 18:03:16,243 - root - INFO - 102656 - 108172 - Generating content with state variables:
+{'campaign_name': 'fresh launch', 'promotion_link': '', 'previous_campaign_reference': '', 'sku': '500L', 'product_category': 'Cooking Oil', 'campaign_date_range': '', 'age_range': '25-45', 'gender': 'Female', 'income_level': 'Middle', 'region': 'Nairobi, Mombasa', 'urban_rural': 'Urban', 'specific_instructions': '', 'brand': 'Fresh Fri', 'tone_style': 'Professional', 'search_results': None, 'template_type': 'Custom Campaign', 'output_format': 'Text', 'rag_context_str': ''}
+2025-02-18 18:03:16,244 - root - INFO - 102656 - 108172 - No web search performed
+2025-02-18 18:03:20,128 - root - INFO - 102656 - 108172 - Generated content:
+Okay, so you want something *fresh* for Fresh Fri (and Pwani Oil's other goodies!), targeting those Nairobi and Mombasa mamas, yeah? Something that feels real, not like a robot wrote it. Got it. Here's a try:
+
+"Hey fam! 👋 Level up your kitchen game with Pwani Oil! From crispy, golden fries with Fresh Fri to fluffy cakes with our baking fats, we've got you covered. We're all about quality ingredients, crafted with care, and kind to our planet 🌍. Think delicious *and* good for you – that's the Pwani Oil promise! Plus, we're always innovating to make your life easier (and tastier!). Ready to feel good about what you cook? Choose Pwani Oil. Your family (and your taste buds) will thank you! 😉 #PwaniOil #FreshFri #CookWithLove #SustainableLiving"
+2025-02-18 18:03:20,133 - src.chatbot - INFO - 102656 - 108172 - Creating text output with role: assistant
+2025-02-18 18:03:20,134 - src.chatbot - INFO - 102656 - 108172 - Creating summary output with role: assistant
+2025-02-18 18:03:20,136 - root - INFO - 102656 - 108172 - Initializing Google model: gemini-2.0-pro-exp-02-05
